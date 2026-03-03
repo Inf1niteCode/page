@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inf1niteCode — Playable Ads Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- TYPEWRITER CODE BACKGROUND -->
+    <div
+      id="codeBackground"
+      style="
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        padding: 60px 40px 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px 80px;
+        align-content: flex-start;
+      "
+    ></div>
+
+    <!-- ANIMATED LINES CANVAS -->
+    <canvas
+      id="linesCanvas"
+      style="
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.55;
+      "
+    ></canvas>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>Playable Ads Developer</span>
+        <span>Cocos Creator</span>
+        <span>Interactive Creatives</span>
+        <span>HTML5 / JS / Canvas</span>
+        <span>Mobile &amp; Web</span>
+        <span>Inf1niteCode</span>
+        <span>Playable Ads Developer</span>
+        <span>Cocos Creator</span>
+        <span>Interactive Creatives</span>
+        <span>HTML5 / JS / Canvas</span>
+        <span>Mobile &amp; Web</span>
+        <span>Inf1niteCode</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-number">∞</div>
+
+      <div class="glitch-container fade-up">
+        <h1 class="name">Inf<span class="highlight">1</span>nite<br />Code</h1>
+      </div>
+
+      <p class="role-tag fade-up">Playable Ads · Cocos Creator</p>
+
+      <div class="contacts fade-up">
+        <a
+          class="contact-btn"
+          href="https://github.com/Inf1niteCode"
+          target="_blank"
+        >
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+          <span>github.com/Inf1niteCode</span>
+        </a>
+        <a class="contact-btn" href="https://t.me/Inf1niteCode" target="_blank">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.972 14.4l-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.846.185z"
+            />
+          </svg>
+          <span>t.me/Inf1niteCode</span>
+        </a>
+      </div>
+
+      <div class="scroll-hint fade-up">
+        <div class="scroll-line"></div>
+        <span>Works</span>
+      </div>
+    </section>
+
+    <section class="works-section">
+      <div class="section-header">
+        <h2 class="section-title">Selected<br />Works</h2>
+        <span class="section-count">// Portfolio</span>
+        <div class="section-status">
+          <span class="status-dot"></span>
+          Updating live
+        </div>
+      </div>
+
+      <div class="works-grid">
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">01</div>
+            <div class="work-title">Catch items</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">02</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">03</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+<a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">04</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">05</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">06</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">07</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">08</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+        <a
+          class="work-card"
+          href="/builds/web-mobile/index.html"
+          target="_blank"
+          <!-- style="
+            background-image: url(/builds/week01-tap/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          " -->
+        >
+          <div>
+            <div class="work-num">09</div>
+            <div class="work-title">Updating live...</div>
+          </div>
+          <div class="work-tags">
+            <span class="tag active">GameApp</span>
+            <span class="tag">Cocos Creator</span>
+            <span class="tag">HTML5</span>
+          </div>
+          <div class="work-arrow">↗</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-name">Inf1niteCode</span>
+      <span class="footer-copy"
+        >Playable Ads Developer · Cocos Creator — <span id="year"></span
+      ></span>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
